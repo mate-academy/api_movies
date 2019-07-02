@@ -1,0 +1,31 @@
+{
+  "name": "api_movies",
+  "version": "0.1.0",
+  "description": "first api implementation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valeriitovstyk/api_movies.git"
+  },
+  "keywords": [
+    "api",
+    "express",
+    "node"
+  ],
+  "author": "@laverka",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/valeriitovstyk/api_movies/issues"
+  },
+  "homepage": "https://github.com/valeriitovstyk/api_movies#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pg": "^7.11.0"
+  },
+  "devDependencies": {
+    "ws": "3.3.2"
+  }
+}
