@@ -38,7 +38,7 @@ app.get('/movies/titlesByYear/:year(\\d+)', (req, res)=>{
 app.post('/movies/:year(\\d+)/:title', (req, res)=>{
     client.query('INSERT INTO movies (title, release_year) values($1, $2) returning id',
         [req.params.title, req.params.year], (err, result)=>{
-        res.json(result.rows[0])
+        res.json(result.rows[0].id)
     })
 });
 
@@ -46,14 +46,14 @@ app.put('/movies/:id(\\d+)/:year(\\d+)/:title', (req, res)=>{
     client.query('UPDATE movies SET release_year=$1, title=$2 WHERE id=$3  returning id',
         [req.params.year, req.params.title, req.params.id],
         (err, result)=>{
-            res.json(result.rows)
+            res.json(result.rowCount)
         }
         )
 });
 
 app.delete('/movies/:id(\\d+)', (req, res)=>{
     client.query('DELETE FROM movies WHERE id=$1 returning id', [req.params.id], (err, result)=>{
-        res.json(result.rows[0])
+        res.json(result.rowCount)
     })
 });
 
