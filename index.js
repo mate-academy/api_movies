@@ -18,7 +18,11 @@ app.get('/movies/:id(\\d+)', (req, res) => {
 
 app.get('/movies/titles', (req, res) => {
     client.query('SELECT title FROM movies ORDER BY title ASC', (err, result) => {
-        res.json(result.rows);
+        if (result.rows.length) {
+            res.json(result.rows);
+        } else {
+            res.sendStatus(404)
+        }
     });
 });
 
