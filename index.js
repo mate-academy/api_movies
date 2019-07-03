@@ -6,7 +6,7 @@ const client = new Client();
 client.connect();
 
 app.get('/movies', (req, res) => {
-  client.query('SELECT * FROM movies', (err, result) => {
+  client.query('SELECT * FROM movies ORDER BY year', (err, result) => {
     res.json(result.rows)
   })
 });
