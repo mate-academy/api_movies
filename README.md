@@ -18,7 +18,7 @@
     year int)
     
     INSERT INTO "public"."movies" ("id", "title", "year")
-    VALUE ('Moana', 2016),
+    VALUES ('Moana', 2016),
           ('Zootopia', 2016), 
           ('Frozen', 2013), 
           ('Wreck-It Ralph', 2012),

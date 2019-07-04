@@ -58,13 +58,10 @@ app.put('/movies/:id(\\d+)/:year(\\d+)/:title', (req, res) => {
 
 app.delete('/movies/:id(\\d+)', (req, res) => {
   client.query('DELETE FROM public.movies WHERE id = $1', [req.params.id], (err, result) => {
-    if(result.rowCount === 0) {
-      res.status(404).send(`Delete 0 movie`)
-    } else {
-      res.send(`Delete 1 movie`)
-    }
+      res.json(result.rowCount)
   })
 });
+
 process.on('exit', () => {
   client.end();
 });
