@@ -38,7 +38,7 @@ app.get('/mov/titlesByYear/:year(\\d+)', (req, res) => {
 app.post('/mov/:year(\\d+)/:title', (req, res) => {
   client.query('INSERT INTO movies (title, release_year) VALUES ($1, $2) RETURNING id',
     [req.params.title, req.params.year], (err, result) => {
-     res.send(result.rows[0]);
+     res.json(result.rows[0].id);
     });
 });
 
