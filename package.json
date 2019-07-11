@@ -1,0 +1,25 @@
+{
+  "name": "api_movies",
+  "version": "1.0.0",
+  "description": "1. Fork this repo, clone the fork, and initialize a Node app in the folder. Add `node_modules` to `.gitignore`. Install `express` and `pg` to the folder.",
+  "main": "index.js",
+  "dependencies": {
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "pg": "^7.11.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IgorPototskyi/api_movies.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IgorPototskyi/api_movies/issues"
+  },
+  "homepage": "https://github.com/IgorPototskyi/api_movies#readme"
+}
